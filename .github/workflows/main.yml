@@ -30,7 +30,7 @@ jobs:
       #        JAR_FILE=$(ls spring-boot-2-rest-service-basic/target/*.jar |  head -n 1)
       #        java -jar $JAR_FILE
       - name: upload artifacts
-        uses: actions/upload-artifacts@v3
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: target/
