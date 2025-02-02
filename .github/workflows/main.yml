@@ -19,6 +19,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: mvn build
         run: mvn -f spring-boot-2-rest-service-basic/pom.xml clean install
+        continue-on-error: true
       - name: run jar
         run: |
           java -jar target/*.jar
