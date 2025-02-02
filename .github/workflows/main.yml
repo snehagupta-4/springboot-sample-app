@@ -25,11 +25,9 @@ jobs:
              pwd
              cd spring-boot-2-rest-service-basic
              ls -al
-            
-            
-      
-      # - name: run jar
-      #   run: |
-      #     java -jar target/*.jar
+      - name: run jar
+        run: |
+             JAR_FILE = $(ls spring-boot-2-rest-service-basic/target/*.jar |  head -n 1)
+             java -jar $JAR_FILE
     
   
