@@ -18,10 +18,15 @@ jobs:
           distribution: 'zulu'
           java-version: ${{ matrix.java }}
       - name: mvn build
-        run: mvn -f spring-boot-2-rest-service-basic/pom.xml clean install
+        run: mvn -f spring-boot-2-rest-service-basic/pom.xml clean package
         continue-on-error: true
       - name: path
-        run: pwd
+        run: |
+             pwd
+             cd spring-boot-2-rest-service-basic
+             ls -al
+            
+            
       
       # - name: run jar
       #   run: |
