@@ -15,8 +15,8 @@ jobs:
       - name: install java
         uses: actions/setup-java@v4
         with:
-          distributions: '<distribution>'
-          java-versions: ${{ matrix.java }}
+          distribution: '<distribution>'
+          java-version: ${{ matrix.java }}
       - name: mvn build
         run: mvn clean install
       - name: run jar
